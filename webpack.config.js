@@ -12,14 +12,27 @@ module.exports = {
     rules: [
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        loader: "file-loader",
-        options: {
-          name: "[path][name].[ext]",
-        },
+        use: [
+          {
+            loader: "img-optimize-loader",
+            options: {
+              compress: {
+                mode: "high",
+                webp: true,
+                gifsicle: true,
+                disableOnDevelopment: false,
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.sass$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.mp3$/,
+        use: ["file-loader"],
       },
     ],
   },

@@ -51,14 +51,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 320px;
+  height: 230px;
 }
 
 .card-block__img {
   height: 180px;
+  width: 100%;
 }
 
 .card-block__title {
@@ -66,5 +67,9 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.card-block__audio {
+  margin: 8px;
 }
 /*# sourceMappingURL=style.css.map */
