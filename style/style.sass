@@ -1,0 +1,41 @@
+$heading_color: #bd0d0d
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-size: 18px
+    font-family: 'Times New Roman'
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.heading
+    margin: 40px
+    color: $heading_color
+    font-size: 24px
+
+.gallery-box
+    display: flex
+    width: 1100px
+    flex-wrap: wrap
+    gap: 30px
+    justify-content: space-around
+
+.card-block
+    border: 1px solid #666464
+    border-radius: 5px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 320px
+
+    &__img
+        height: 180px
+
+    &__title
+        padding: 12px 16px
+        align-self: center
