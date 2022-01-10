@@ -9,15 +9,19 @@ export function GetGalleryCard(item) {
     const CardImg = document.createElement("img");
     CardImg.src = item.resourse;
     CardImg.classList = "card-block__img";
-
     ItemsCardBlock.appendChild(CardImg);
-  } else {
+  } else if (item.type === "audio") {
     const CardAudio = document.createElement("audio");
     CardAudio.classList = "card-block__audio";
     CardAudio.src = item.resourse;
     CardAudio.controls = true;
-
     ItemsCardBlock.appendChild(CardAudio);
+  } else {
+    const VideoCard = document.createElement("video");
+    VideoCard.classList = "card-block__video";
+    VideoCard.src = item.resourse;
+    VideoCard.controls = true;
+    ItemsCardBlock.appendChild(VideoCard);
   }
 
   const CardTitle = document.createElement("p");

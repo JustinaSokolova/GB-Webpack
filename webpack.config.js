@@ -31,7 +31,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.mp3$/,
+        test: /\.mp[3|4]$/,
         use: ["file-loader"],
       },
     ],
